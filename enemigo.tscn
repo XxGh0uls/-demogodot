@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bxlmqhmjtctd2"]
+
+[ext_resource type="Script" uid="uid://di31f86n3s1pt" path="res://enemigo.gd" id="1_a5tj2"]
+[ext_resource type="Texture2D" uid="uid://dg3b3f1mq11cw" path="res://img/ENEMIGO.jpeg" id="1_becj5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_onym7"]
+radius = 71.30919
+
+[node name="Enemigo" type="Area2D" unique_id=1382188678]
+script = ExtResource("1_a5tj2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1499704689]
+texture = ExtResource("1_becj5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=462276678]
+shape = SubResource("CircleShape2D_onym7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

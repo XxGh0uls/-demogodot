@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://byp3so6tepuly"]
+
+[ext_resource type="PackedScene" uid="uid://clgtc3aci7da0" path="res://jugador.tscn" id="1_h06de"]
+[ext_resource type="PackedScene" uid="uid://cpdfqlyktcko5" path="res://pared.tscn" id="2_7gdj4"]
+[ext_resource type="PackedScene" uid="uid://bxlmqhmjtctd2" path="res://enemigo.tscn" id="3_7gdj4"]
+[ext_resource type="Texture2D" uid="uid://d0x0y8b112lrp" path="res://img/mori.jpeg" id="4_j87l1"]
+
+[node name="Nivel" type="Node2D" unique_id=746783002]
+
+[node name="Jugador" parent="." unique_id=1110013906 instance=ExtResource("1_h06de")]
+position = Vector2(550, 300)
+
+[node name="pared_bot" parent="." unique_id=1635594430 instance=ExtResource("2_7gdj4")]
+position = Vector2(0, 650)
+
+[node name="pared_top" parent="." unique_id=936812957 instance=ExtResource("2_7gdj4")]
+
+[node name="pare_left" parent="." unique_id=1148706759 instance=ExtResource("2_7gdj4")]
+rotation = 1.5707964
+scale = Vector2(0.574, 0.578)
+
+[node name="pare_right" parent="." unique_id=637047128 instance=ExtResource("2_7gdj4")]
+position = Vector2(1150, 0)
+rotation = 1.5707964
+scale = Vector2(0.574, 1)
+
+[node name="Enemigo" parent="." unique_id=1382188678 instance=ExtResource("3_7gdj4")]
+position = Vector2(100, 100)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2141344194]
+visible = false
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 140.0
+offset_bottom = 140.0
+texture = ExtResource("4_j87l1")

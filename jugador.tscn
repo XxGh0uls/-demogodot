@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://clgtc3aci7da0"]
+
+[ext_resource type="Texture2D" uid="uid://ixkqdka5kskm" path="res://img/icon.svg" id="1_16k11"]
+[ext_resource type="Script" uid="uid://cv73ofnwq2enp" path="res://jugador.gd" id="1_omvyu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ue81"]
+size = Vector2(130, 130)
+
+[node name="Jugador" type="CharacterBody2D" unique_id=1073673604]
+script = ExtResource("1_omvyu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=168751615]
+texture = ExtResource("1_16k11")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=166961268]
+shape = SubResource("RectangleShape2D_7ue81")
+debug_color = Color(0.74652547, 0.4342368, 0.43630812, 0.41960785)
